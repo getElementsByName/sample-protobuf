@@ -5,6 +5,7 @@ from proto.sample_pb2 import Sample
 stringValueList = ["s", None, "1", ""]
 int64ValueList = [1, None, 0, 1000]
 
+
 def get_wrapper_string_value_list(value):
     return StringValue(value=value)
 
@@ -33,3 +34,7 @@ def serialize():
 
 json_value = serialize()
 print(f'json: {json_value}')
+
+
+assert(StringValue(value='a').value is 'a')
+assert(StringValue(value=None).value is '')
