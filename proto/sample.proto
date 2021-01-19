@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+
+
+message Sample {
+  repeated google.protobuf.StringValue stringValueList = 1;
+  repeated google.protobuf.Int64Value int64ValueList = 2;
+}
